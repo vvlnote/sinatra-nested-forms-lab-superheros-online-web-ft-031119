@@ -3,7 +3,7 @@ class Team
   attr_accessor :name, :motto, :members
   
   @@TEAMS = []
-  def initialized(name:, motto:)
+  def initialize(name:, motto:)
     @name = name
     @motto = motto
     @members = []
