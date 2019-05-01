@@ -1,7 +1,6 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
-    binding.pry
     set :views, Proc.new { File.join(root, "../views/") }
 
     get '/' do
