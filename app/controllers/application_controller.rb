@@ -11,11 +11,11 @@ class App < Sinatra::Base
     post '/teams' do
 
       @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
-      #params[:team][:members].each do |member|
-      #  member = Member.new(name: member[:name], power: member[:power], bio: member[:bio])
-       # member.team = @team
-       # @team.members << member
-      #end
+      params[:team][:members].each do |member|
+        member = Member.new(name: member[:name], power: member[:power], bio: member[:bio])
+        member.team = @team
+        @team.members << member
+      end
       puts "Name = #{@team.name}"
       erb :team
     end
