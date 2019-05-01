@@ -1,12 +1,11 @@
 class Team 
   
-  attr_accessor :name, :motto, :members, :team
+  attr_accessor :name, :motto, :members
   
   @@TEAMS = []
   def initialized(name:, motto:)
     @name = name
     @motto = motto
-    @team = nil
     @members = []
     @@TEAMS << self
   end
